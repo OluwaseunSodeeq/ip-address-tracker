@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | IP Address Tracker</title>
+    <link rel="stylesheet" href="./css-files/styles.css" />
+    <script defer src="./js-files/script.js"></script>
+  </head>
+  <body>
+    <div class="bgdiv">
+      <div class="bg">
+        <img src="../images/pattern-bg-desktop.png" alt="" />
+      </div>
+      <div id="map" class="map"></div>
+    </div>
+    <div class="overlaydiv">
+      <h1>IP Address Tracker</h1>
+      <div class="inputDiv">
+        <input
+          class="former"
+          type="text"
+          placeholder="Search for any IP address or domain"
+        />
+        <!-- <input class="later" value=">" type="button" /> -->
+
+        <button type="submit">
+          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14">
+            <path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6" />
+          </svg>
+        </button>
+      </div>
+      <div class="displaydiv">
+        <!-- add offset value dynamically using the API -->
+
+        <div class="ipAddress">
+          <h4>IP Address</h4>
+          <h2>OluwaSEUN</h2>
+        </div>
+        <div class="location">
+          <h4>Location</h4>
+          <h2>OluwaSEUN</h2>
+        </div>
+        <div class="timezone">
+          <h4>Timezone UTC</h4>
+          <h2>OluwaSEUN</h2>
+        </div>
+        <div class="isp">
+          <h4>ISP</h4>
+          <h2>OluwaSEUN</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Oluwaseun Sodeeq</a>.
+    </div>
+  </body>
+</html>
