@@ -38,37 +38,45 @@
     <div class="overlaydiv">
       <h1>IP Address Tracker</h1>
       <div class="inputDiv">
-        <input
-          class="former"
-          type="text"
-          placeholder="Search for any IP address or domain"
-        />
-        <!-- <input class="later" value=">" type="button" /> -->
+        <form action="#">
+          <input
+            class="former"
+            type="text"
+            placeholder="Search for any IP address or domain"
+            required
+          />
+          <!-- <input class="later" value=">" type="button" /> -->
 
-        <button type="submit">
-          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14">
-            <path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6" />
-          </svg>
-        </button>
+          <button type="submit">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14">
+              <path
+                fill="none"
+                stroke="#FFF"
+                stroke-width="3"
+                d="M2 1l6 6-6 6"
+              />
+            </svg>
+          </button>
+        </form>
       </div>
       <div class="displaydiv">
         <!-- add offset value dynamically using the API -->
 
         <div class="ipAddress">
-          <h4>IP Address</h4>
-          <h2>OluwaSEUN</h2>
+          <h4>IP ADDRESS</h4>
+          <h2>192.212.174.101</h2>
         </div>
         <div class="location">
-          <h4>Location</h4>
-          <h2>OluwaSEUN</h2>
+          <h4>LOCATION</h4>
+          <h2>Broklyn, NY 10001</h2>
         </div>
         <div class="timezone">
-          <h4>Timezone UTC</h4>
-          <h2>OluwaSEUN</h2>
+          <h4>TIMEZONE</h4>
+          <h2>UTC- 05:00</h2>
         </div>
         <div class="isp">
           <h4>ISP</h4>
-          <h2>OluwaSEUN</h2>
+          <h2>SPaceX Starlink</h2>
         </div>
       </div>
     </div>

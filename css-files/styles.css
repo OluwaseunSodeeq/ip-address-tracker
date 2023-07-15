@@ -52,12 +52,12 @@ body .overlaydiv {
   margin: 30px auto 0px;
   /* border: 1px solid #000; */
 }
-.overlaydiv .inputDiv > input,
-.overlaydiv .inputDiv > button {
+.overlaydiv .inputDiv input,
+.overlaydiv .inputDiv button {
   height: 60px;
 }
 
-.overlaydiv .inputDiv > input {
+.overlaydiv .inputDiv input {
   width: 80%;
   padding-left: 20px;
   border-top: 20px;
@@ -65,7 +65,7 @@ body .overlaydiv {
   border-top-left-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
 }
-.overlaydiv .inputDiv > button > svg {
+.overlaydiv .inputDiv button > svg {
   color: var(--white-color);
 }
 
@@ -74,7 +74,7 @@ body .overlaydiv {
   font-size: 20px;
   font-weight: 500;
 }
-.overlaydiv .inputDiv > button {
+.overlaydiv .inputDiv button {
   width: 15%;
   background-color: var(--black);
   margin-left: -1%;
@@ -87,6 +87,8 @@ body .overlaydiv {
   height: 200px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
   padding: 20px;
   background-color: var(--white-color);
   margin: 40px auto 0px;
