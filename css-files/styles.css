@@ -16,17 +16,17 @@ body {
   /* position: relative; */
   font-family: "Rubik", sans-serif;
   height: 100vh;
-  overscroll-behavior-y: none;
-  text-align: center;
+  /* overscroll-behavior-y: none; */
   width: 100%;
   overflow: hidden;
+  /* text-align: center; */
+  /* margin: 0 auto; */
 }
 body .bgdiv {
   position: relative;
-
   width: 100%;
   height: 25%;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
 }
 body .bgdiv > img {
   width: 100%;
@@ -35,16 +35,27 @@ body .bgdiv > img {
 body #map {
   position: relative;
   height: 70%;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 body .overlaydiv {
   position: absolute;
   width: 100%;
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
   z-index: 1000;
   top: 30px;
 }
 .overlaydiv h1 {
   color: var(--white-color);
+  text-align: center;
+}
+.overlaydiv div {
+  width: 300px;
+  border-right: 1px solid var(--grey-color);
+}
+.overlaydiv div:last-child {
+  border: none;
 }
 .overlaydiv .inputDiv {
   width: 550px;
@@ -84,19 +95,20 @@ body .overlaydiv {
 }
 .overlaydiv .displaydiv {
   width: 75%;
-  height: 200px;
+  height: 100px;
+  /* border: 5px solid #000; */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
   padding: 20px;
   background-color: var(--white-color);
   margin: 40px auto 0px;
   border-radius: 10px;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
 }
 .displaydiv div {
   text-align: left;
+  margin-left: 30px;
 }
 .displaydiv h4 {
   color: var(--grey-color);
@@ -119,13 +131,39 @@ body .overlaydiv {
 }
 
 @media (max-width: 768px) {
-  .overlaydiv .displaydiv {
+  body {
+    width: 100%;
+    margin: 0 auto;
+  }
+  body .bgdiv {
+    width: 100%;
+  }
+  #map {
+    width: 100%;
+  }
+  body .overlaydiv {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .overlaydiv .inputDiv {
+    width: 70%;
     flex-direction: column;
   }
   .overlaydiv .displaydiv {
-    height: auto;
+    justify-content: center;
+    width: 70%;
+    background-color: #000;
+  }
+  .overlaydiv div {
+    border: none;
   }
   .displaydiv div {
     text-align: center;
   }
+
+  /* .overlaydiv .inputDiv,
+  body .overlaydiv {
+    width: 70%;
+    border: 1px solid red;
+  } */
 }
