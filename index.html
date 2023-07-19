@@ -31,9 +31,7 @@
   </head>
   <body>
     <div class="bgdiv">
-      <!-- <div class="bg"> -->
-      <img src="../images/pattern-bg-desktop.png" alt="" />
-      <!-- </div> -->
+      <!-- <img src="../images/pattern-bg-desktop.png" alt="" /> -->
     </div>
     <div id="map"></div>
 
@@ -44,10 +42,8 @@
           <input
             class="former"
             type="text"
-            placeholder="Search for any IP address or domain"
-            required
+            placeholder="Search for any IP address"
           />
-          <!-- <input class="later" value=">" type="button" /> -->
 
           <button type="submit">
             <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14">
@@ -59,8 +55,10 @@
               />
             </svg>
           </button>
+          <div class="error hide"></div>
         </form>
       </div>
+
       <div class="displaydiv">
         <!-- add offset value dynamically using the API -->
 

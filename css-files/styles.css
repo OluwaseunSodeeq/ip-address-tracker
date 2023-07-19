@@ -13,20 +13,15 @@
   --black: rgb(41, 34, 34);
 }
 body {
-  /* position: relative; */
   font-family: "Rubik", sans-serif;
-  height: 100vh;
-  /* overscroll-behavior-y: none; */
+  height: auto;
   width: 100%;
-  overflow: hidden;
-  /* text-align: center; */
-  /* margin: 0 auto; */
 }
 body .bgdiv {
   position: relative;
   width: 100%;
-  height: 25%;
-  /* border: 1px solid #000; */
+  /* height: 25%; */
+  height: 280px;
 }
 body .bgdiv > img {
   width: 100%;
@@ -34,8 +29,8 @@ body .bgdiv > img {
 }
 body #map {
   position: relative;
-  height: 70%;
-  /* border: 1px solid red; */
+  /* height: 70%; */
+  height: 550px;
 }
 body .overlaydiv {
   position: absolute;
@@ -52,6 +47,7 @@ body .overlaydiv {
 }
 .overlaydiv div {
   width: 300px;
+  padding-right: 20px;
   border-right: 1px solid var(--grey-color);
 }
 .overlaydiv div:last-child {
@@ -61,7 +57,7 @@ body .overlaydiv {
   width: 550px;
   min-width: 300px;
   margin: 30px auto 0px;
-  /* border: 1px solid #000; */
+  border: none;
 }
 .overlaydiv .inputDiv input,
 .overlaydiv .inputDiv button {
@@ -75,6 +71,15 @@ body .overlaydiv {
   border-left: 20px;
   border-top-left-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
+}
+.overlaydiv .inputDiv .error {
+  font-size: 20px;
+  color: red;
+  margin-top: 10px;
+  transition: transform 1s;
+}
+.hide {
+  display: none;
 }
 .overlaydiv .inputDiv button > svg {
   color: var(--white-color);
@@ -92,19 +97,19 @@ body .overlaydiv {
   margin-bottom: -7px;
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
+  cursor: pointer;
 }
 .overlaydiv .displaydiv {
   width: 75%;
-  height: 100px;
-  /* border: 5px solid #000; */
+  /* max-height: 120px; */
+  height: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
   background-color: var(--white-color);
-  margin: 40px auto 0px;
+  margin: 50px auto 0px;
   border-radius: 10px;
-  /* border: 1px solid blue; */
 }
 .displaydiv div {
   text-align: left;
@@ -119,27 +124,32 @@ body .overlaydiv {
 }
 /* Default styles */
 .attribution {
-  font-size: 11px;
+  font-size: 20px;
+
   text-align: center;
   font-style: 20px;
   color: hsl(228, 45%, 44%);
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
-  font-style: 20px;
+  font-size: 20px;
+  font-weight: 700;
   text-decoration: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   body {
     width: 100%;
+    height: 800px;
     margin: 0 auto;
   }
   body .bgdiv {
     width: 100%;
+    height: 300px;
   }
   #map {
     width: 100%;
+    height: 650px;
   }
   body .overlaydiv {
     width: 100%;
@@ -148,22 +158,75 @@ body .overlaydiv {
   .overlaydiv .inputDiv {
     width: 70%;
     flex-direction: column;
+    margin-bottom: 60px;
+  }
+  .overlaydiv h1 {
+    margin-top: -30px;
   }
   .overlaydiv .displaydiv {
+    width: 50%;
+    flex-direction: column;
     justify-content: center;
-    width: 70%;
-    background-color: #000;
+    padding: 20px 0;
+    align-content: center;
+    margin-top: -30px;
+    gap: 20px;
   }
   .overlaydiv div {
     border: none;
   }
   .displaydiv div {
     text-align: center;
+    margin-left: 0;
   }
-
-  /* .overlaydiv .inputDiv,
-  body .overlaydiv {
-    width: 70%;
-    border: 1px solid red;
-  } */
+}
+@media (max-width: 500px) {
+  body {
+    height: 800px;
+  }
+  body .bgdiv {
+    height: 200px;
+  }
+  #map {
+    height: 550px;
+  }
+  .overlaydiv .displaydiv {
+    width: 80%;
+    margin-top: -45px;
+    padding-left: 15px;
+  }
+  .overlaydiv .inputDiv button {
+    margin-left: -2%;
+  }
+  .overlaydiv .inputDiv {
+    margin-left: 40px;
+  }
+}
+@media (max-width: 320px) {
+  body {
+    height: 700px;
+  }
+  body .bgdiv {
+    height: 150px;
+  }
+  #map {
+    height: 550px;
+  }
+  .overlaydiv .displaydiv {
+    width: 90%;
+    margin-right: 0px auto;
+  }
+  .overlaydiv .displaydiv {
+    gap: 5px;
+    margin-top: -50px;
+  }
+  .overlaydiv .inputDiv {
+    margin-left: 25px;
+  }
+  .displaydiv h4 {
+    font-size: 18px;
+  }
+  .displaydiv h2 {
+    font-size: 20px;
+  }
 }
