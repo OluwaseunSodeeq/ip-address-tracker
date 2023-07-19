@@ -53,7 +53,7 @@ body .overlaydiv {
 }
 .overlaydiv .inputDiv {
   width: 550px;
-  min-width: 300px;
+  /* min-width: 300px; */
   margin: 40px auto 0px;
   border: none;
   padding: 0px;
@@ -189,19 +189,28 @@ body .overlaydiv {
   }
   .overlaydiv .displaydiv {
     width: 80%;
-    margin-top: -45px;
+    margin-top: 20px;
     padding-left: 15px;
   }
   .overlaydiv .inputDiv button {
     margin-left: -2%;
   }
   .overlaydiv .inputDiv {
-    width: 80%;
+    width: 75%;
+    margin-top: 20px;
+  }
+  .overlaydiv .inputDiv input,
+  .overlaydiv .inputDiv button {
+    height: 50px;
+  }
+  .overlaydiv h1 {
+    font-size: 25px;
   }
 }
 @media (max-width: 320px) {
   body {
     height: 700px;
+    overflow-x: hidden;
   }
   body .bgdiv {
     height: 150px;
@@ -211,7 +220,6 @@ body .overlaydiv {
   }
   .overlaydiv .displaydiv {
     width: 90%;
-    margin: -50px 0px auto;
     gap: 5px;
   }
 
