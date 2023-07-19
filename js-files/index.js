@@ -7,6 +7,9 @@ const form = document.querySelector("form");
 let errorDiv = document.querySelector(".error");
 const errorMessage = "Invalid Ip Address";
 const emptyFieldmsg = "Your Field is empty";
+const API_KEY = "at_ADR3BZza4ZtLUwRjOX7lmi620Cgdk";
+const newurl =
+  " https://geo.ipify.org/api/v2/country,city?apiKey=at_ADR3BZza4ZtLUwRjOX7lmi620Cgdk&ipAddress=8.8.8.8 ";
 
 //MAP
 let map = L.map("map");
@@ -45,38 +48,24 @@ const ipInformation = function (data) {
 const displayIpAdd = async function (ip) {
   try {
     const res = await fetch(
-      `https://geo.ipify.org/api/v2/country,city?apiKey=at_9cW261rGX3O5SvxJyR28kxtbY2fIs&ipAddress=${ip}`
+      `https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}&ipAddress=${ip}`
     );
     const data = await res.json();
+    ipInformation(data);
     const latitude = data.location.lat;
     const longitude = data.location.lng;
-
-    ipInformation(data);
+    console.log(data, [6.96907, 3.48404]);
     setCoord(map, [latitude, longitude]);
 
-    markerFuntion(map, [+latitude, +longitude], data);
-  } catch (error) {
-    console.log(error);
-  }
-};
-
-const init = async function (ip) {
-  try {
-    //Getting the user ip
-    const res = await fetch(`https://api.ipify.org?format=json`);
-    const data = await res.json();
-
-    // displayIpAdd("");
-
-    //rendering the user ip
-    displayIpAdd(ip);
+    markerFuntion(map, [latitude, longitude], data);
   } catch (error) {
     console.error(error);
   }
 };
 
-//calling init function with default ip address
-init("192.212.174.101");
+//calling display function with default ip address
+displayIpAdd("192.212.174.101");
+// displayIpAdd();
 
 //Focus
 function focusfunc() {
@@ -109,7 +98,7 @@ const trackerFuntion = async function (e) {
   const ip = data1.ip;
 
   const res = await fetch(
-    `https://geo.ipify.org/api/v2/country,city?apiKey=at_9cW261rGX3O5SvxJyR28kxtbY2fIs&ipAddress=${ip}`
+    `https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}&ipAddress=${ip}`
   );
   const data = await res.json();
   const latitude = data.location.lat;

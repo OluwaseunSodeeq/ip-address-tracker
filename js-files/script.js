@@ -1,6 +1,4 @@
-const API_KEY = "at_9cW261rGX3O5SvxJyR28kxtbY2fIs";
-const url = `https://geo.ipify.org/api/v2/country,city?apiKey=at_9cW261rGX3O5SvxJyR28kxtbY2fIs&ipAddress=`;
-const url1 = `https://geo.ipify.org/api/v2/country,city?apiKey=at_9cW261rGX3O5SvxJyR28kxtbY2fIs&ipAddress=8.8.8.8`;
+const url = `https://geo.ipify.org/api/v2/country,city?apiKey=at_9cW261rGX3O5SvxJyR28kxtbY2fIs&ipAddress=8.8.8.8`;
 
 //ALL APIS UTILIZED
 /*
@@ -11,6 +9,7 @@ const url1 = `https://geo.ipify.org/api/v2/country,city?apiKey=at_9cW261rGX3O5Sv
 
   */
 //BAGROUND IMAGE
+
 const body = document.querySelector("body");
 const bgImage = document.querySelector(".bgdiv");
 const observer = new ResizeObserver((enteries) => {
@@ -30,3 +29,19 @@ const observer = new ResizeObserver((enteries) => {
 });
 
 observer.observe(bgImage);
+
+// To get the device/user Location
+const oldinit = async function (ip) {
+  try {
+    //Getting the user ip
+    const res = await fetch(`https://api.ipify.org?format=json`);
+    const data = await res.json();
+    console.log(data, ip);
+    // displayIpAdd("");
+
+    //rendering the user ip
+    displayIpAdd(ip);
+  } catch (error) {
+    console.error(error);
+  }
+};
