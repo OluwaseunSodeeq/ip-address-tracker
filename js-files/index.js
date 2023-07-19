@@ -127,7 +127,3 @@ form.addEventListener("submit", trackerFuntion);
 // 192.121.225.192 Stockholm
 // 185.83.71.12 royal tunbridge Englnad
 // 196.240.58.28 paris
-
-//lAT AND lNG
-// setCoord(map, [51.505, -0.09]);
-// 6.45197 3.33115
