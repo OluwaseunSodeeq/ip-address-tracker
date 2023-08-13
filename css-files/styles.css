@@ -38,7 +38,7 @@ body .overlaydiv {
   position: absolute;
   width: 100%;
   height: auto;
-  padding-top: 20px;
+  /* padding-top: 20px; */
   padding-bottom: 20px;
   z-index: 1000;
   top: 30px;
@@ -58,7 +58,7 @@ body .overlaydiv {
 .overlaydiv .inputDiv {
   width: 550px;
   /* min-width: 300px; */
-  margin: 40px auto 0px;
+  margin: 20px auto 0px;
   border: none;
   padding: 0px;
 }
@@ -110,7 +110,7 @@ body .overlaydiv {
   align-items: center;
   padding: 20px;
   background-color: var(--white-color);
-  margin: 50px auto 0px;
+  margin: 20px auto 0px;
   border-radius: 10px;
 }
 .displaydiv div {
