@@ -37,12 +37,10 @@ body #map {
 body .overlaydiv {
   position: absolute;
   width: 100%;
+  top: 15%;
   height: auto;
   padding-bottom: 20px;
   z-index: 1000;
-  /* top: 30px; */
-  top: 15vh;
-  /* border: 20px solid red; */
 }
 .overlaydiv h1 {
   color: var(--white-color);
