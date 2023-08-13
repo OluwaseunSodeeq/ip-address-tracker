@@ -30,10 +30,18 @@ const markerFuntion = function (map, position, data) {
     iconSize: [32, 40],
   });
 
-  L.marker(position, { icon: customIcon })
-    .addTo(map)
-    .bindPopup(`${data.location.city}`)
-    .openPopup();
+  const observer = new ResizeObserver((enteries) => {
+    if (enteries[0].contentRect.width < 500) {
+      L.marker(position, { icon: customIcon }).addTo(map).openPopup();
+    } else {
+      L.marker(position, { icon: customIcon })
+        .addTo(map)
+        .bindPopup(`${data.location.city}`)
+        .openPopup();
+    }
+  });
+
+  observer.observe(body);
 };
 
 //INFORMATION

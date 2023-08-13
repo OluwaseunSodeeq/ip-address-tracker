@@ -134,21 +134,35 @@ body .overlaydiv {
   font-weight: 700;
   text-decoration: none;
 }
-
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
   body {
     width: 100%;
-    height: 800px;
+    height: 100vh;
     margin: 0 auto;
   }
   body .bgdiv {
     width: 100%;
-    height: 300px;
+    height: 47vh;
   }
-  #map {
+  body #map {
     width: 100%;
-    height: 650px;
+    height: 50vh;
   }
+}
+@media (max-width: 1000px) {
+  body {
+    width: 100%;
+    height: 900px;
+  }
+  body .bgdiv {
+    height: 52%;
+    /* height: 800px;  */
+  }
+
+  body #map {
+    height: 40%;
+  }
+
   body .overlaydiv {
     width: 100%;
     margin: 0 auto;
@@ -167,6 +181,7 @@ body .overlaydiv {
     padding: 20px 0px;
     align-content: center;
     gap: 20px;
+    margin-bottom: 15px;
   }
   .overlaydiv div {
     border: none;
@@ -176,15 +191,13 @@ body .overlaydiv {
     margin-left: 0;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 450px) {
   body {
     height: 800px;
+    width: 100%;
   }
-  body .bgdiv {
-    height: 200px;
-  }
-  #map {
-    height: 550px;
+  body::-webkit-scrollbar {
+    display: none;
   }
   .overlaydiv .displaydiv {
     width: 80%;
@@ -206,17 +219,9 @@ body .overlaydiv {
     font-size: 25px;
   }
 }
+@media (max-width: 400px) {
+}
 @media (max-width: 320px) {
-  body {
-    height: 700px;
-    overflow-x: hidden;
-  }
-  body .bgdiv {
-    height: 150px;
-  }
-  #map {
-    height: 550px;
-  }
   .overlaydiv .displaydiv {
     width: 90%;
     gap: 5px;
