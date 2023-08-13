@@ -40,7 +40,9 @@ body .overlaydiv {
   height: auto;
   padding-bottom: 20px;
   z-index: 1000;
-  top: 30px;
+  /* top: 30px; */
+  top: 15vh;
+  /* border: 20px solid red; */
 }
 .overlaydiv h1 {
   color: var(--white-color);
@@ -111,6 +113,7 @@ body .overlaydiv {
   background-color: var(--white-color);
   margin: 20px auto 0px;
   border-radius: 10px;
+  /* border: 20px solid red; */
 }
 .displaydiv div {
   text-align: left;
@@ -150,6 +153,9 @@ body .overlaydiv {
   body #map {
     width: 100%;
     height: 50vh;
+  }
+  body .overlaydiv {
+    top: 30px;
   }
 }
 @media (max-width: 1000px) {
