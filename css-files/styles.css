@@ -32,7 +32,7 @@ body {
 body .bgdiv {
   position: relative;
   width: 100%;
-  height: 200px;
+  height: 250px;
 }
 body .bgdiv > img {
   width: 100%;
@@ -47,7 +47,7 @@ body #map {
   width: 100%;
   max-width: 1000px;
   z-index: 1000;
-  top: 20px;
+  top: 10px;
   left: 0%;
   right: 0%;
   margin: 0 auto;
