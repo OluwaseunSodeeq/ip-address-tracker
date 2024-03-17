@@ -62,6 +62,7 @@ body #map {
 .overlaydiv h1 {
   color: var(--white-color);
   text-align: center;
+  margin-top: 10px;
 }
 .overlaydiv div {
   width: 280px;
