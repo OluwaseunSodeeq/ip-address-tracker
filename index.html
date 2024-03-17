@@ -30,62 +30,64 @@
     <script defer src="./js-files/index.js"></script>
   </head>
   <body>
-    <div class="bgdiv">
-      <!-- <img src="../images/pattern-bg-desktop.png" alt="" /> -->
-    </div>
-    <div id="map"></div>
-
-    <div class="overlaydiv">
-      <h1>IP Address Tracker</h1>
-      <div class="inputDiv">
-        <form action="#">
-          <input
-            class="former"
-            type="text"
-            placeholder="Search for any IP address"
-          />
-
-          <button type="submit">
-            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14">
-              <path
-                fill="none"
-                stroke="#FFF"
-                stroke-width="3"
-                d="M2 1l6 6-6 6"
+    <div class="whole-project">
+      <div class="bgdiv">
+        <!-- <img src="../images/pattern-bg-desktop.png" alt="" /> -->
+      </div>
+      <div id="map"></div>
+      <div class="content">
+        <div class="overlaydiv">
+          <h1>IP Address Tracker</h1>
+          <div class="inputDiv">
+            <form action="#">
+              <input
+                class="former"
+                type="text"
+                placeholder="Search for any IP address"
               />
-            </svg>
-          </button>
-          <div class="error hide"></div>
-        </form>
+
+              <button type="submit">
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14">
+                  <path
+                    fill="none"
+                    stroke="#FFF"
+                    stroke-width="3"
+                    d="M2 1l6 6-6 6"
+                  />
+                </svg>
+              </button>
+              <div class="error hide"></div>
+            </form>
+          </div>
+
+          <div class="displaydiv">
+            <!-- add offset value dynamically using the API -->
+
+            <div class="ipAddress">
+              <h4>IP ADDRESS</h4>
+              <h2>192.212.174.101</h2>
+            </div>
+            <div class="location">
+              <h4>LOCATION</h4>
+              <h2>Broklyn, NY 10001</h2>
+            </div>
+            <div class="timezone">
+              <h4>TIMEZONE</h4>
+              <h2>UTC- 05:00</h2>
+            </div>
+            <div class="isp">
+              <h4>ISP</h4>
+              <h2>SPaceX Starlink</h2>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <div class="displaydiv">
-        <!-- add offset value dynamically using the API -->
-
-        <div class="ipAddress">
-          <h4>IP ADDRESS</h4>
-          <h2>192.212.174.101</h2>
-        </div>
-        <div class="location">
-          <h4>LOCATION</h4>
-          <h2>Broklyn, NY 10001</h2>
-        </div>
-        <div class="timezone">
-          <h4>TIMEZONE</h4>
-          <h2>UTC- 05:00</h2>
-        </div>
-        <div class="isp">
-          <h4>ISP</h4>
-          <h2>SPaceX Starlink</h2>
-        </div>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Oluwaseun Sodeeq</a>.
       </div>
-    </div>
-
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Oluwaseun Sodeeq</a>.
     </div>
   </body>
 </html>

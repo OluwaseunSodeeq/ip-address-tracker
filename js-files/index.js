@@ -20,7 +20,25 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 
 //CORDINATE FUNCTION
 const setCoord = function (map, position) {
-  map.setView(position, 13);
+  const [lat, lng] = position;
+  const observer = new ResizeObserver((enteries) => {
+    if (enteries[0].contentRect.width > 700) {
+      map.setView([lat, lng], 13);
+    }
+    if (
+      enteries[0].contentRect.width > 500 &&
+      enteries[0].contentRect.width < 600
+    ) {
+      map.setView([lat + 0.02, lng], 13);
+    }
+    if (enteries[0].contentRect.width < 500) {
+      map.setView([lat + 0.021, lng], 13);
+    }
+    // else {
+    //   map.setView([lat, lng], 13);
+    // }
+  });
+  observer.observe(body);
 };
 
 //======   CUSTOM MARKER =======
@@ -60,7 +78,7 @@ const displayIpAdd = async function (ip) {
     );
     const data = await res.json();
     ipInformation(data);
-    const latitude = data.location.lat;
+    const latitude = data.location.lat; // Adjust the latitude to shift towards the bottom
     const longitude = data.location.lng;
     console.log(data, [6.96907, 3.48404]);
     setCoord(map, [latitude, longitude]);
@@ -70,6 +88,23 @@ const displayIpAdd = async function (ip) {
     console.error(error);
   }
 };
+// const displayIpAdd = async function (ip) {
+//   try {
+//     const res = await fetch(
+//       `https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}&ipAddress=${ip}`
+//     );
+//     const data = await res.json();
+//     ipInformation(data);
+//     const latitude = data.location.lat;
+//     const longitude = data.location.lng;
+//     console.log(data, [6.96907, 3.48404]);
+//     setCoord(map, [latitude, longitude]);
+
+//     markerFuntion(map, [latitude, longitude], data);
+//   } catch (error) {
+//     console.error(error);
+//   }
+// };
 
 //calling display function with default ip address
 displayIpAdd("192.212.174.101");
