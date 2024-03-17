@@ -14,7 +14,7 @@
 }
 body {
   font-family: "Rubik", sans-serif;
-  height: 100vh;
+  height: auto;
   width: 100%;
   background-color: var(--white-color);
   display: flex;
@@ -32,7 +32,7 @@ body {
 body .bgdiv {
   position: relative;
   width: 100%;
-  height: 180px;
+  height: 200px;
 }
 body .bgdiv > img {
   width: 100%;
@@ -40,14 +40,14 @@ body .bgdiv > img {
 }
 body #map {
   position: relative;
-  height: 500px;
+  height: 450px;
 }
 .content {
   position: absolute;
   width: 100%;
   max-width: 1000px;
   z-index: 1000;
-  top: 10px;
+  top: 20px;
   left: 0%;
   right: 0%;
   margin: 0 auto;
