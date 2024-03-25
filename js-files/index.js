@@ -22,12 +22,12 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 const setCoord = function (map, position) {
   const [lat, lng] = position;
   const observer = new ResizeObserver((enteries) => {
-    if (enteries[0].contentRect.width > 700) {
+    if (enteries[0].contentRect.width > 1000) {
       map.setView([lat, lng], 13);
     }
     if (
       enteries[0].contentRect.width > 500 &&
-      enteries[0].contentRect.width < 600
+      enteries[0].contentRect.width < 1001
     ) {
       map.setView([lat + 0.02, lng], 13);
     }
@@ -80,7 +80,7 @@ const displayIpAdd = async function (ip) {
     ipInformation(data);
     const latitude = data.location.lat; // Adjust the latitude to shift towards the bottom
     const longitude = data.location.lng;
-    console.log(data, [6.96907, 3.48404]);
+    // console.log(data, [6.96907, 3.48404]);
     setCoord(map, [latitude, longitude]);
 
     markerFuntion(map, [latitude, longitude], data);

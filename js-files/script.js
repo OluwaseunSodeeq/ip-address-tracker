@@ -13,7 +13,8 @@ const url = `https://geo.ipify.org/api/v2/country,city?apiKey=at_9cW261rGX3O5Svx
 const body = document.querySelector("body");
 const bgImage = document.querySelector(".bgdiv");
 const observer = new ResizeObserver((enteries) => {
-  if (enteries[0].contentRect.width < 800) {
+  // if (enteries[0].contentRect.width < 800) {
+  if (enteries[0].contentRect.width < 1000) {
     bgImage.innerHTML = "";
     const html = `
     <img src="./images/pattern-bg-mobile.png" alt="mobile bacKground Image">
