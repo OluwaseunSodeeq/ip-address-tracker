@@ -7,7 +7,9 @@ const form = document.querySelector("form");
 let errorDiv = document.querySelector(".error");
 const errorMessage = "Invalid Ip Address";
 const emptyFieldmsg = "Your Field is empty";
-const API_KEY = "at_ADR3BZza4ZtLUwRjOX7lmi620Cgdk";
+const API_KEY = "at_RYa5PJWLhI2wSZn5fEBO048hrwP0n";
+
+
 const newurl =
   " https://geo.ipify.org/api/v2/country,city?apiKey=at_ADR3BZza4ZtLUwRjOX7lmi620Cgdk&ipAddress=8.8.8.8 ";
 
@@ -45,7 +47,8 @@ const setCoord = function (map, position) {
 const markerFuntion = function (map, position, data) {
   const customIcon = L.icon({
     iconUrl: "./images/icon-location.svg",
-    iconSize: [32, 40],
+    iconSize: [26, 30],
+    // iconSize: [32, 40],
   });
 
   const observer = new ResizeObserver((enteries) => {
@@ -70,7 +73,7 @@ const ipInformation = function (data) {
   ispText.textContent = data.isp;
 };
 
-//RENDERING FUNCTION
+// //RENDERING FUNCTION
 const displayIpAdd = async function (ip) {
   try {
     const res = await fetch(
@@ -85,30 +88,13 @@ const displayIpAdd = async function (ip) {
 
     markerFuntion(map, [latitude, longitude], data);
   } catch (error) {
-    console.error(error);
+    console.error("Error fetching IP information:", error.message);
   }
 };
-// const displayIpAdd = async function (ip) {
-//   try {
-//     const res = await fetch(
-//       `https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}&ipAddress=${ip}`
-//     );
-//     const data = await res.json();
-//     ipInformation(data);
-//     const latitude = data.location.lat;
-//     const longitude = data.location.lng;
-//     console.log(data, [6.96907, 3.48404]);
-//     setCoord(map, [latitude, longitude]);
 
-//     markerFuntion(map, [latitude, longitude], data);
-//   } catch (error) {
-//     console.error(error);
-//   }
-// };
-
-//calling display function with default ip address
+//Calling display function with default IP
 displayIpAdd("192.212.174.101");
-// displayIpAdd();
+
 
 //Focus
 function focusfunc() {

@@ -14,48 +14,63 @@
 }
 body {
   font-family: "Rubik", sans-serif;
-  height: auto;
+  height: 100vh;
   width: 100%;
   background-color: var(--white-color);
+  
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .whole-project {
   position: relative;
-  height: 700px;
-  width: 100%;
-  max-width: 1200px;
+   height: 98vh;
+   max-height: 700px;
+  width: 80%;
   margin: 0 auto;
-  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }
-body .bgdiv {
-  position: relative;
+.whole-project .bgdiv {
+  position: absolute;
+  top: 0;
   width: 100%;
-  height: 250px;
+  height: 35%;
+  z-index: 50;
 }
-body .bgdiv > img {
+.whole-project .bgdiv > img {
   width: 100%;
   height: 100%;
 }
-body #map {
-  position: relative;
-  height: 400px;
+ .whole-project #map {
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  height: 63%;
+  width: 100%;
+  z-index: 30;
+
+  
 }
-.content {
+.whole-project .content {
   position: absolute;
   width: 100%;
   max-width: 1000px;
+  height: 7%;
+
   z-index: 1000;
   top: 20px;
   left: 0%;
   right: 0%;
   margin: 0 auto;
+  
+  
 }
 .overlaydiv {
   position: relative;
   width: 90%;
-  height: auto;
   padding-bottom: 20px;
   margin: 0 auto;
 }
@@ -140,6 +155,8 @@ body #map {
   margin-top: 15px;
 }
 .attribution {
+  position: absolute;
+  bottom: 0;
   font-size: 20px;
 
   text-align: center;
@@ -162,14 +179,14 @@ body #map {
     width: 100%;
     height: 100vh;
   }
-  body .bgdiv {
+  .whole-project .bgdiv {
     width: 100%;
   }
-  body #map {
+   .whole-project #map {
     width: 100%;
   }
 
-  .content {
+  .whole-project .content {
     width: 100%;
     top: 3%;
   }
@@ -185,16 +202,14 @@ body #map {
   .whole-project {
     width: 90%;
   }
-  body .bgdiv {
+  .whole-project .bgdiv {
     height: 250px;
   }
 
-  body #map {
+   .whole-project #map {
     height: 500px;
   }
-  .content {
-    /* border: 2px solid red; */
-
+  .whole-project .content {
     top: 20px;
   }
   .overlaydiv {
@@ -214,7 +229,6 @@ body #map {
     padding: 30px 10px;
     align-items: center;
     gap: 10px;
-    /* margin-bottom: 15px; */
   }
   .overlaydiv div {
     border: none;
@@ -225,15 +239,15 @@ body #map {
   }
 }
 @media (max-width: 768px) {
-  .content {
+  .whole-project .content {
     top: 50px;
   }
-  body #map {
+   .whole-project #map {
     height: 600px;
   }
 }
 @media (max-width: 600px) {
-  .content {
+  .whole-project .content {
     top: 10px;
   }
   .overlaydiv .displaydiv {
@@ -242,7 +256,7 @@ body #map {
     justify-content: center;
     align-items: center;
   }
-  body #map {
+   .whole-project #map {
     height: 500px;
   }
 }
@@ -254,10 +268,10 @@ body #map {
   body::-webkit-scrollbar {
     display: none;
   }
-  .content {
+  .whole-project .content {
     top: 30px;
   }
-  body #map {
+   .whole-project #map {
     height: 62vh;
   }
 
@@ -280,7 +294,7 @@ body #map {
   .overlaydiv h1 {
     font-size: 25px;
   }
-  body .bgdiv {
+  .whole-project .bgdiv {
     height: 30vh;
   }
 }
@@ -292,13 +306,13 @@ body #map {
   .whole-project {
     height: 100%;
   }
-  body #map {
+   .whole-project #map {
     height: 500px;
   }
-  body .bgdiv {
+  .whole-project .bgdiv {
     height: 230px;
   }
-  .content {
+  .whole-project .content {
     top: 30px;
   }
 
