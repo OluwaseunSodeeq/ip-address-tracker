@@ -8,10 +8,8 @@ let errorDiv = document.querySelector(".error");
 const errorMessage = "Invalid Ip Address";
 const emptyFieldmsg = "Your Field is empty";
 const API_KEY = "at_ysrhQyqZEnuT544PXcu9sDqUpuvWI";
-// const API_KEY = "at_RYa5PJWLhI2wSZn5fEBO048hrwP0n";
 
-// const newurl =
-//   " https://geo.ipify.org/api/v2/country,city?apiKey=at_ADR3BZza4ZtLUwRjOX7lmi620Cgdk&ipAddress=8.8.8.8 ";
+
 const newurl =
   "https://geo.ipify.org/api/v2/country,city?apiKey=at_ysrhQyqZEnuT544PXcu9sDqUpuvWI&ipAddress=8.8.8.8";
 

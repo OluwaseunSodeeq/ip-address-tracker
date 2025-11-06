@@ -46,3 +46,53 @@ const oldinit = async function (ip) {
     console.error(error);
   }
 };
+// Test
+// Closure
+console.log("JS Test ");
+function parent() {
+  let initValue = 0;
+  return function () {
+    return initValue++;
+  };
+}
+// console.log(parent()); returns the inner function
+const parentResult = parent();
+console.log(parentResult()); // 0
+console.log(parentResult()); // 1
+console.log(parentResult()); // 2
+
+// Asjnc Await
+async function fetchData() {
+  const res = await fetch("https://api.example.com/data");
+  const data = await res.json();
+  return data;
+}
+
+/*
+Controlled Component vs Uncontrolled Component
+1. Controlled Component:
+function ControlledInput() {
+const [value, setValue] = React.useState('');
+const HnadleChange = () => {setValue(e.target.value)};
+const HnadleSubmit = () => console.log(value);};
+  return (
+  <>
+  <form onSubmit={handleSubmit}>
+  <input type="text" value={value} onChange={handleChange} />
+  <button type="submit">Submit</button>
+  <>)
+  }
+
+  // Uncontrolled Component:
+  function UncontrolledInput() {
+  const inputRef = React.useRef(null);
+  const handleSubmit = () => {
+  console.log(inputRef.current.value);
+  };
+  return (
+  <form onSubmit={handleSubmit}>
+  <input type="text" ref={inputRef} />
+  <button type="submit">Submit</button>
+  </form>    
+}
+*/
