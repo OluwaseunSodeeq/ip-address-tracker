@@ -55,5 +55,36 @@ async function asyncExample() {
 asyncExample();
 console.log("Asynchronous Example End");
 // React interview questions and answers
+// Props
+
+/*
+import {useState} from "react"
+function PropsContainer ({props}){
+return <p>Hello everone, here is your value {props}</p>
+}
+edxport function App (){
+const [props,setProps]  =  useState(true)
+rturn(
+<div>
+<PropsContainer props = {props}/>
+</div>)
+}
+
+// COntrolled Components are the components  whose data are managed by react State.
+function ControlledDataInput(){
+const [inputData setInputData] = useState("");
+const function handleChnage(e){
+setInputData(e.target.value)
+}
+return (
+<form>
+<input type={text} value={inputData} onChange={handleChange} />
+)
+}
+
+// Uncontrolled Components are components  that uses DOM directly
+// Uncontrolled
+<input ref={inputRef} />
+*/
 
 // NextJS interview questions and answers
