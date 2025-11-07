@@ -71,7 +71,20 @@ rturn(
 }
 
 // COntrolled Components are the components  whose data are managed by react State.
-function ControlledDataInput(){
+Controlled Component vs Uncontrolled Component
+// Controlled Component Examples:
+1. function ControlledInput() {
+const [value, setValue] = React.useState('');
+const HnadleChange = () => {setValue(e.target.value)};
+const HnadleSubmit = () => console.log(value);};
+  return (
+  <>
+  <form onSubmit={handleSubmit}>
+  <input type="text" value={value} onChange={handleChange} />
+  <button type="submit">Submit</button>
+  <>)
+  }
+2. function ControlledDataInput(){
 const [inputData setInputData] = useState("");
 const function handleChnage(e){
 setInputData(e.target.value)
@@ -84,7 +97,18 @@ return (
 
 // Uncontrolled Components are components  that uses DOM directly
 // Uncontrolled
-<input ref={inputRef} />
+// Uncontrolled Component Examples:
+  1. function UncontrolledInput() {
+  const inputRef = React.useRef(null);
+  const handleSubmit = () => {
+  console.log(inputRef.current.value);
+  };
+  return (
+  <form onSubmit={handleSubmit}>
+  <input type="text" ref={inputRef} />
+  <button type="submit">Submit</button>
+  </form>   
+ 2. <input ref={inputRef} />
 */
 
 // NextJS interview questions and answers
