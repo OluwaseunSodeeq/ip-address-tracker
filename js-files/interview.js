@@ -112,3 +112,49 @@ return (
 */
 
 // NextJS interview questions and answers
+const nextAns1 = "getStaticProps: builds data at build time (for static pages)";
+const nextAns2 = "getServerSideProps: fetches data on every request";
+const nextAns3 =
+  "getStaticPaths: defines dynamic routes for static generation.";
+/*
+export async function getServerSideProps() {
+  const res = await fetch("https://api.example.com");
+  const data = await res.json();
+  return { props: { data } };
+}
+*/
+// Question 2: How does Next.js handle routing?
+const naxtAnsRouting1 =
+  "Say: Next.js uses a file-based routing system — every file in the pages directory automatically becomes a route.";
+// Question 3: How would you protect a route in Next.js?
+const nextAnsProtectedRute =
+  "Say: I can use next-auth and wrap protected pages with a custom ProtectedRoute that checks for a session before rendering.";
+
+// Question 1: Why use Tailwind CSS?
+const tailwindAns1 =
+  "Tailwind speeds up development by using utility classes directly in JSX.";
+const tailwindANs2 =
+  "It avoids context switching between CSS and JS and keeps styles consistent";
+/* <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">
+  Submit
+</button> 
+*/
+
+// How do you make a layout responsive in Tailwind?
+const tailwindAnsLayout =
+  "Tailwind uses responsive prefixes like sm:, md:, lg: to apply styles at different breakpoints.";
+
+// Git & Version Control
+// Question 1: What’s the difference between git pull and git fetch?
+const gitAnsGitFect =
+  "git fetch only downloads updates from the remote but doesn’t merge them";
+const gitAnsGitPull =
+  "while git pull downloads and merges changes into your local branch.";
+
+//   How do you revert a commit?
+const gitReveryt = "Say: If I want to undo a commit safely, I use:";
+// git revert <commit-id>
+
+// Question 3: How do you create a new branch and push it
+const gitnewBranch =
+  "git checkout -b feature/dashboard and git push origin feature/dashboard";
