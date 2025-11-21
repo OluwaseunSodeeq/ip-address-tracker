@@ -284,3 +284,9 @@ const gitnewBranch =
 // When to use:
 // For user-specific pages or interactions (like dashboards, chat apps).
 // When SEO is not a priority.
+
+// 🚀 In Short:
+// Type	Who Renders	When	Best For
+// SSR	Server On every request	Dynamic + SEO pages
+// SSG	Server  (once)	Build time	Static, fast content
+// CSR	Browser	 After  page load	   Interactive apps
